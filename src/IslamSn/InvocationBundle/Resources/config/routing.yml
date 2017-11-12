@@ -1,0 +1,3 @@
+islam_sn_invocation_homepage:
+    path:     /
+    defaults: { _controller: IslamSnInvocationBundle:Default:index }

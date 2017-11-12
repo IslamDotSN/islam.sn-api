@@ -1,0 +1,27 @@
+islam_sn_core:
+    resource: "@IslamSnCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+islam_sn_social:
+    resource: "@IslamSnSocialBundle/Resources/config/routing.yml"
+    prefix:   /
+
+islam_sn_publication:
+    resource: "@IslamSnPublicationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+islam_sn_mosque:
+    resource: "@IslamSnMosqueBundle/Resources/config/routing.yml"
+    prefix:   /
+
+islam_sn_invocation:
+    resource: "@IslamSnInvocationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+islam_sn_user:
+    resource: "@IslamSnUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

@@ -1,0 +1,10 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: login
+    user_class: IslamSn\UserBundle\Entity\User
+    from_email:
+        address: "contact@duka.com"
+        sender_name: "Duka"
+    registration:
+        confirmation:
+            enabled: true

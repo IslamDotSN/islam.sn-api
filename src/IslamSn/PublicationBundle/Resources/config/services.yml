@@ -1,0 +1,4 @@
+services:
+#    islam_sn_publication.example:
+#        class: IslamSn\PublicationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

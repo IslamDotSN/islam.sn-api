@@ -1,0 +1,4 @@
+services:
+#    islam_sn_invocation.example:
+#        class: IslamSn\InvocationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

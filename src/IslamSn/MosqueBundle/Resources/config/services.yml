@@ -1,0 +1,4 @@
+services:
+#    islam_sn_mosque.example:
+#        class: IslamSn\MosqueBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
