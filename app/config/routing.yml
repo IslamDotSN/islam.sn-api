@@ -1,3 +1,8 @@
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
 islam_sn_core:
     resource: "@IslamSnCoreBundle/Resources/config/routing.yml"
     prefix:   /
@@ -12,7 +17,7 @@ islam_sn_publication:
 
 islam_sn_mosque:
     resource: "@IslamSnMosqueBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/v1/mosque/
 
 islam_sn_invocation:
     resource: "@IslamSnInvocationBundle/Resources/config/routing.yml"

@@ -1,0 +1,4 @@
+easy_admin:
+    entities:
+        - IslamSn\MosqueBundle\Entity\Mosque
+        - IslamSn\MosqueBundle\Entity\PrayTab
