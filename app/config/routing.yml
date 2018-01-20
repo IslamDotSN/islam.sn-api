@@ -3,6 +3,9 @@ easy_admin_bundle:
     type:     annotation
     prefix:   /admin
 
+api_login_check:
+    path: /api/login_check
+
 islam_sn_core:
     resource: "@IslamSnCoreBundle/Resources/config/routing.yml"
     prefix:   /
@@ -25,7 +28,7 @@ islam_sn_invocation:
 
 islam_sn_user:
     resource: "@IslamSnUserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /utilisateur
 
 app:
     resource: '@AppBundle/Controller/'
