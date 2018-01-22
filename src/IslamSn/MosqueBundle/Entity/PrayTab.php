@@ -22,44 +22,44 @@ class PrayTab
     private $id;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="suuba", type="time_immutable")
+     * @ORM\Column(name="suuba", type="time")
      */
     private $suuba;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="fadjr", type="time_immutable")
+     * @ORM\Column(name="fadjr", type="time")
      */
     private $fadjr;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="tisbar", type="time_immutable")
+     * @ORM\Column(name="tisbar", type="time")
      */
     private $tisbar;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="takussan", type="time_immutable")
+     * @ORM\Column(name="takussan", type="time")
      */
     private $takussan;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="timis", type="time_immutable")
+     * @ORM\Column(name="timis", type="time")
      */
     private $timis;
 
     /**
-     * @var time_immutable
+     * @var time
      *
-     * @ORM\Column(name="guewe", type="time_immutable")
+     * @ORM\Column(name="guewe", type="time")
      */
     private $guewe;
 
@@ -91,7 +91,7 @@ class PrayTab
     /**
      * Set suuba
      *
-     * @param time_immutable $suuba
+     * @param time $suuba
      *
      * @return PrayTab
      */
@@ -105,7 +105,7 @@ class PrayTab
     /**
      * Get suuba
      *
-     * @return time_immutable
+     * @return time
      */
     public function getSuuba()
     {
@@ -115,7 +115,7 @@ class PrayTab
     /**
      * Set fadjr
      *
-     * @param time_immutable $fadjr
+     * @param time $fadjr
      *
      * @return PrayTab
      */
@@ -129,7 +129,7 @@ class PrayTab
     /**
      * Get fadjr
      *
-     * @return time_immutable
+     * @return time
      */
     public function getFadjr()
     {
@@ -139,7 +139,7 @@ class PrayTab
     /**
      * Set tisbar
      *
-     * @param time_immutable $tisbar
+     * @param time $tisbar
      *
      * @return PrayTab
      */
@@ -153,7 +153,7 @@ class PrayTab
     /**
      * Get tisbar
      *
-     * @return time_immutable
+     * @return time
      */
     public function getTisbar()
     {
@@ -163,7 +163,7 @@ class PrayTab
     /**
      * Set takussan
      *
-     * @param time_immutable $takussan
+     * @param time $takussan
      *
      * @return PrayTab
      */
@@ -177,7 +177,7 @@ class PrayTab
     /**
      * Get takussan
      *
-     * @return time_immutable
+     * @return time
      */
     public function getTakussan()
     {
@@ -187,7 +187,7 @@ class PrayTab
     /**
      * Set timis
      *
-     * @param time_immutable $timis
+     * @param time $timis
      *
      * @return PrayTab
      */
@@ -201,7 +201,7 @@ class PrayTab
     /**
      * Get timis
      *
-     * @return time_immutable
+     * @return time
      */
     public function getTimis()
     {
@@ -211,7 +211,7 @@ class PrayTab
     /**
      * Set guewe
      *
-     * @param time_immutable $guewe
+     * @param time $guewe
      *
      * @return PrayTab
      */
@@ -225,7 +225,7 @@ class PrayTab
     /**
      * Get guewe
      *
-     * @return time_immutable
+     * @return time
      */
     public function getGuewe()
     {

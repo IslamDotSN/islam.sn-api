@@ -1,3 +1,119 @@
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_pray_tab:
+    resource: "@IslamSnMosqueBundle/Controller/PrayTabController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_mosque_mosque:
+    resource: "@IslamSnMosqueBundle/Controller/MosqueController.php"
+    type:     annotation
+
+islam_sn_generator:
+    resource: "@IslamSnGeneratorBundle/Resources/config/routing.yml"
+    prefix:   /
+
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
@@ -6,29 +122,43 @@ easy_admin_bundle:
 api_login_check:
     path: /api/login_check
 
+
+app.swagger_ui:
+    path: /doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+
 islam_sn_core:
+    type: rest
     resource: "@IslamSnCoreBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/core
 
 islam_sn_social:
+    type: rest
     resource: "@IslamSnSocialBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/community
 
 islam_sn_publication:
     resource: "@IslamSnPublicationBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/publications
+    type: rest
 
 islam_sn_mosque:
     resource: "@IslamSnMosqueBundle/Resources/config/routing.yml"
-    prefix:   /api/v1/mosque/
+    prefix:   /api/mosque/
+    type: rest
 
 islam_sn_invocation:
     resource: "@IslamSnInvocationBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/invocation
+    type: rest
 
 islam_sn_user:
+    type: rest
     resource: "@IslamSnUserBundle/Resources/config/routing.yml"
     prefix:   /utilisateur
+
 
 app:
     resource: '@AppBundle/Controller/'

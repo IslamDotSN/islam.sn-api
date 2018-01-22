@@ -4,7 +4,7 @@ namespace IslamSn\MosqueBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class PrayTabControllerTest extends WebTestCase
+class MosqueControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()
@@ -13,13 +13,13 @@ class PrayTabControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/praytab/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /praytab/");
+        $crawler = $client->request('GET', '/mosque/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /mosque/");
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'islamsn_mosquebundle_praytab[field_name]'  => 'Test',
+            'islamsn_mosquebundle_mosque[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class PrayTabControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'islamsn_mosquebundle_praytab[field_name]'  => 'Foo',
+            'islamsn_mosquebundle_mosque[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

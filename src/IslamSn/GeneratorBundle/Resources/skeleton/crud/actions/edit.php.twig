@@ -1,0 +1,33 @@
+
+    /**
+{% block phpdoc_method_header %}
+     * Displays a form to edit an existing {{ entity_singularized }} entity.
+{% endblock phpdoc_method_header %}
+     *
+{% block phpdoc_method_annotations %}
+{% if 'annotation' == format %}
+    * @Post("/api/{{ entity_bundle|lower }}/{{route_prefix}}/{{ '{' ~ identifier ~ '}' }}/edit ")
+    * @Put("/api/{{ entity_bundle|lower }}/{{route_prefix}}/{{ '{' ~ identifier ~ '}' }}/edit ")
+{% endif %}
+{% endblock phpdoc_method_annotations %}
+     */
+{% block method_definition %}
+    public function editAction(Request $request, {{ entity_class }} ${{ entity_singularized }})
+{% endblock method_definition %}
+    {
+{% block method_body %}
+        {% if use_form_type_instance -%}
+            $editForm = $this->createForm(new {{ entity_singularized|capitalize }}Type(), ${{ entity_singularized }});
+        {% else -%}
+            $editForm = $this->createForm('{{ namespace }}\Form\{{ entity }}Type', ${{ entity_singularized }});
+        {% endif -%}
+        $editForm->handleRequest($request);
+        $this->getDoctrine()->getManager()->flush();
+{% endblock method_body %}
+
+{% block method_return %}
+
+        $view = $this->view(${{ entity_singularized }});
+        return $this->handleView($view);  
+{% endblock method_return %}
+    }

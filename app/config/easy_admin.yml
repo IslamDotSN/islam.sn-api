@@ -1,4 +1,31 @@
+
 easy_admin:
+    site_name: 'Islam <em style="font-size: 80%;">Megacorp.</em>'
     entities:
-        - IslamSn\MosqueBundle\Entity\Mosque
-        - IslamSn\MosqueBundle\Entity\PrayTab
+        Mosque:
+            class: IslamSn\MosqueBundle\Entity\Mosque
+        PrayTab:
+            class: IslamSn\MosqueBundle\Entity\PrayTab
+            label: 'Les heures de prieres'
+            list:
+                title: "Les heures de prieres"
+                fields:
+                    - { property: 'id' }
+                    - { property: 'suuba', label: 'Suba' }
+                    - { property: 'fadjr', label: 'Fadj' }
+                    - { property: 'tisbar', label: 'Tisbar' }
+                    - { property: 'takussan', label: 'Takussan' }
+                    - { property: 'timis', label: 'Timis' }
+                    - { property: 'guewe', label: 'Guewe' }
+                    - { property: 'tabStartDate', label: "Du" }
+                    - { property: 'tabEndDate', label: "Au" }
+            form:  # <-- 'form' is applied to both 'new' and 'edit' views
+                fields:
+                    - { property: 'suuba', type: 'time', label: 'Suba' }
+                    - { property: 'fadjr', type: 'time', label: 'Fadj' }
+                    - { property: 'tisbar', type: 'time', label: 'Tisbar' }
+                    - { property: 'takussan', type: 'time', label: 'Takussan' }
+                    - { property: 'timis', type: 'time', label: 'Timis' }
+                    - { property: 'guewe', type: 'time', label: 'Guewe' }
+                    - { property: 'tabStartDate' }
+                    - { property: 'tabEndDate' }

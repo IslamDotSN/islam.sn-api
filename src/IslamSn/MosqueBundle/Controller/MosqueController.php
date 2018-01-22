@@ -2,7 +2,7 @@
 
 namespace IslamSn\MosqueBundle\Controller;
 
-use IslamSn\MosqueBundle\Entity\PrayTab;
+use IslamSn\MosqueBundle\Entity\Mosque;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations as Route;
@@ -18,88 +18,88 @@ use FOS\RestBundle\Controller\Annotations\Put;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Praytab controller.
+ * Mosque controller.
  *
 
  */
-class PrayTabController extends FOSRestController
+class MosqueController extends FOSRestController
 {
     /**
-     * Lists all prayTab entities.
+     * Lists all mosque entities.
      *
-     * @Get("/api/mosque/praytab")
+     * @Get("/api/mosque/mosque")
      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $prayTabs = $em->getRepository('IslamSnMosqueBundle:PrayTab')->findAll();
+        $mosques = $em->getRepository('IslamSnMosqueBundle:Mosque')->findAll();
 
-        $view = $this->view($prayTabs);
+        $view = $this->view($mosques);
         return $this->handleView($view);    
 
     }
 
     /**
-     * Creates a new prayTab entity.
+     * Creates a new mosque entity.
      *
-     * @Post("/api/mosque/praytab/create ")
+     * @Post("/api/mosque/mosque/create ")
      */
     public function newAction(Request $request)
     {
-        $prayTab = new Praytab();
-        $form = $this->createForm('IslamSn\MosqueBundle\Form\PrayTabType', $prayTab);
+        $mosque = new Mosque();
+        $form = $this->createForm('IslamSn\MosqueBundle\Form\MosqueType', $mosque);
         $form->handleRequest($request);
         $em = $this->getDoctrine()->getManager();
-        $em->persist($prayTab);
+        $em->persist($mosque);
         $em->flush();
 
-        $view = $this->view($prayTab);
+        $view = $this->view($mosque);
         return $this->handleView($view);   
     }
 
     /**
-     * Finds and displays a prayTab entity.
+     * Finds and displays a mosque entity.
      *
-     * @Get("/api/mosque/praytab/{id}/show")
+     * @Get("/api/mosque/mosque/{id}/show")
      */
-    public function showAction(PrayTab $prayTab)
+    public function showAction(Mosque $mosque)
     {
 
 
-    $view = $this->view($prayTab);
+    $view = $this->view($mosque);
     return $this->handleView($view);   
     }
 
     /**
-     * Displays a form to edit an existing prayTab entity.
+     * Displays a form to edit an existing mosque entity.
      *
-    * @Post("/api/mosque/praytab/{id}/edit ")
-    * @Put("/api/mosque/praytab/{id}/edit ")
+    * @Post("/api/mosque/mosque/{id}/edit ")
+    * @Put("/api/mosque/mosque/{id}/edit ")
      */
-    public function editAction(Request $request, PrayTab $prayTab)
+    public function editAction(Request $request, Mosque $mosque)
     {
-        $editForm = $this->createForm('IslamSn\MosqueBundle\Form\PrayTabType', $prayTab);
+        $editForm = $this->createForm('IslamSn\MosqueBundle\Form\MosqueType', $mosque);
         $editForm->handleRequest($request);
         $this->getDoctrine()->getManager()->flush();
 
 
-        $view = $this->view($prayTab);
+        $view = $this->view($mosque);
         return $this->handleView($view);  
     }
 
     /**
-     * Deletes a prayTab entity.
+     * Deletes a mosque entity.
      *
-     * @Delete("/api/mosque/praytab/{id}/delete ")
+     * @Delete("/api/mosque/mosque/{id}/delete ")
      */
-    public function deleteAction(Request $request, PrayTab $prayTab)
+    public function deleteAction(Request $request, Mosque $mosque)
     {
         $em = $this->getDoctrine()->getManager();
-        $em->remove($prayTab);
+        $em->remove($mosque);
         $em->flush();
 
-        $view = $this->view($prayTab);
+        $view = $this->view($mosque);
         return $this->handleView($view);  
     }
 

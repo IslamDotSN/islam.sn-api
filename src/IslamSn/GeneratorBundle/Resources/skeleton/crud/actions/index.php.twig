@@ -1,0 +1,27 @@
+    /**
+{% block phpdoc_method_header %}
+     * Lists all {{ entity_singularized }} entities.
+{% endblock phpdoc_method_header %}
+     *
+{% block phpdoc_method_annotations %}
+{% if 'annotation' == format %}
+     * @Get("/api/{{ entity_bundle|lower }}/{{route_prefix}}")
+{% endif %}
+{% endblock phpdoc_method_annotations %}
+     */
+{% block method_definition %}
+    public function indexAction()
+{% endblock method_definition %}
+    {
+{% block method_body %}
+        $em = $this->getDoctrine()->getManager();
+
+        ${{ entity_pluralized }} = $em->getRepository('{{ bundle }}:{{ entity }}')->findAll();
+{% endblock method_body %}
+
+{% block method_return %}
+        $view = $this->view(${{ entity_pluralized }});
+        return $this->handleView($view);    
+
+{% endblock method_return %}
+    }

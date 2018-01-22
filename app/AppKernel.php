@@ -23,11 +23,13 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new IslamSn\InvocationBundle\IslamSnInvocationBundle(),
             new IslamSn\MosqueBundle\IslamSnMosqueBundle(),
             new IslamSn\PublicationBundle\IslamSnPublicationBundle(),
             new IslamSn\SocialBundle\IslamSnSocialBundle(),
             new IslamSn\CoreBundle\IslamSnCoreBundle(),
+            new IslamSn\GeneratorBundle\IslamSnGeneratorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -1,25 +1,17 @@
-<?php
 
-namespace IslamSn\MosqueBundle\Tests\Controller;
-
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class PrayTabControllerTest extends WebTestCase
-{
-    /*
     public function testCompleteScenario()
     {
         // Create a new client to browse the application
         $client = static::createClient();
 
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/praytab/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /praytab/");
+        $crawler = $client->request('GET', '/{{ route_prefix }}/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /{{ route_prefix }}/");
         $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'islamsn_mosquebundle_praytab[field_name]'  => 'Test',
+            '{{ form_type_name|lower }}[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +25,7 @@ class PrayTabControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'islamsn_mosquebundle_praytab[field_name]'  => 'Foo',
+            '{{ form_type_name|lower }}[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 
@@ -50,6 +42,3 @@ class PrayTabControllerTest extends WebTestCase
         // Check the entity has been delete on the list
         $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
     }
-
-    */
-}

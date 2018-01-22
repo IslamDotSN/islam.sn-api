@@ -1,0 +1,25 @@
+
+    /**
+{% block phpdoc_method_header %}
+     * Finds and displays a {{ entity_singularized }} entity.
+{% endblock phpdoc_method_header %}
+     *
+{% block phpdoc_method_annotations %}
+{% if 'annotation' == format %}
+     * @Get("/api/{{ entity_bundle|lower }}/{{route_prefix}}/{{ '{' ~ identifier ~ '}' }}/show")
+{% endif %}
+{% endblock phpdoc_method_annotations %}
+     */
+{% block method_definition %}
+    public function showAction({{ entity_class }} ${{ entity_singularized }})
+{% endblock method_definition %}
+    {
+{% block method_body %}
+
+{% endblock method_body %}
+
+{% block method_return %}
+    $view = $this->view(${{ entity_singularized }});
+    return $this->handleView($view);   
+{% endblock method_return %}
+    }

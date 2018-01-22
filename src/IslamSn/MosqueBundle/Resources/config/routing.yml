@@ -1,3 +1,0 @@
-mosque_bundle_pray_tab:
-    type:     rest
-    resource: IslamSn\MosqueBundle\Controller\PrayTabController
